@@ -4,36 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82d4719a-7152-425b-8c77-14fb26abbd18" name="변경" comment="Merge branch 'main' of https://github.com/dbwls38/piggyback">
+    <list default="true" id="82d4719a-7152-425b-8c77-14fb26abbd18" name="변경" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/scenario_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/traffic_pattern_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/weather_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analytics/metrics_dashboard.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analytics/risk_logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analytics/scenario_recorder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analytics/statistical_analyzer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/analytics/test_analytics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/hara_config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hara/asil_classifier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hara/controllability_mapper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hara/dynamic_exposure_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hara/exposure_analyzer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hara/hara_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hara/iso26262_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hara/safety_goal_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hara/scenario_risk_graph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hara/severity_analyzer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hara/test_advanced_hara.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hara/test_hara.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/asil_reports" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/hara_logs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/scenario_logs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/yolo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reports/pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/assess/controllability_estimator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/assess/risk_quantifier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/sense/radar_sensor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/test.sara.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenarios/jaywalking.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenarios/scenario_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenarios/sensor_failure.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulator/scenario_loader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulator/simulation_runner.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_asil_classifier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_controllability.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_dynamic_exposure.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_full_pipeline.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_risk_quantifier.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_sara_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_scenarios.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_simulator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/backend/api_routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/scenario_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/scenario_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/ risk_logs" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/corner_case_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/collision_logs" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/pedestrian_behavior_ai.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/adapt/log_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/adapt/log_analyzer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/adapt/policy_updater.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/adapt/policy_updater.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/adapt/reinforcement_learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/adapt/reinforcement_learning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/assess/collision_predictor.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/assess/collision_predictor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/assess/risk_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/assess/risk_engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/assess/safety_score.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/assess/safety_score.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/assess/ttc_calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/assess/ttc_calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/react/emergency_brake.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/react/emergency_brake.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/react/steering_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/react/steering_control.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sara/assess/risk_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/assess/sara_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sara/assess/safety_score.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sara/react/steering_control.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/react/evasive_steering.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sara/react/vehicle_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/react/vehicle_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/sense/camera_sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/sense/camera_sensor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/sense/lidar_sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/sense/lidar_sensor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/sense/object_detector.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/sense/object_detector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenarios/night_rain.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/night_rain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenarios/pedestrian_crossing.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/pedestrian_crossing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenarios/sudden_vehicle_cutin.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/sudden_vehicle_cutin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/pedestrian_crossing.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/right_turn_pedestrian.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/sudden_vehicle_cutin.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/sudden_cut_in.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simulator/carla_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/carla_client.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simulator/pedestrian_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/pedestrian_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/simulator/vehicle_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/vehicle_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/world_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/world_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_risk_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_risk_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/world_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/environment_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_risk_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_hara_engine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_ttc.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_ttc.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/backend/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/backend/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/backend/websocket_server.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/backend/websocket_server.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +78,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Python Unit Test" />
         <option value="Python Script" />
       </list>
     </option>
@@ -56,12 +92,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "dbwls38"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dbwls38&quot;
   }
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -87,20 +123,20 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/dbwls38/piggyback.git",
-    "accountId": "c856455c-d65a-480d-a02c-0c147a759582"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dbwls38/piggyback.git&quot;,
+    &quot;accountId&quot;: &quot;c856455c-d65a-480d-a02c-0c147a759582&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="3E7oQ0LXTrHlsIUH385JfrbP78r" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -112,9 +148,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.main.executor": "Run",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
@@ -122,7 +160,8 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
   <component name="RunManager">
@@ -135,6 +174,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.13 (PythonProject1)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -211,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779541571250</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1779542811295</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779542811295</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,17 +268,17 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="OPEN_GENERIC_TABS">
       <map>
-        <entry key="ac3779fb-27a5-4da2-8f92-0768d59f3785" value="TOOL_WINDOW" />
+        <entry key="8d800fac-fb33-4b3b-b780-174890177d47" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="TAB_STATES">
       <map>
-        <entry key="MAIN">
+        <entry key="8d800fac-fb33-4b3b-b780-174890177d47">
           <value>
             <State />
           </value>
         </entry>
-        <entry key="ac3779fb-27a5-4da2-8f92-0768d59f3785">
+        <entry key="MAIN">
           <value>
             <State />
           </value>
@@ -243,6 +291,7 @@
     <MESSAGE value="Revert &quot;start commit&quot;&#10;&#10;This reverts commit 3b9ea33566f488310e8495b59e415edcb856e6bb." />
     <MESSAGE value="start commit" />
     <MESSAGE value="Merge branch 'main' of https://github.com/dbwls38/piggyback" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' of https://github.com/dbwls38/piggyback" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
 </project>

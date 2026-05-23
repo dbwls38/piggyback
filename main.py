@@ -1,60 +1,301 @@
-# SARA Autonomous Safety SW
+from simulator.simulation_runner import (
+    SimulationRunner
+)
 
-SARA 기반 자율주행 안전성 평가 및 개선 플랫폼
+from ai_hazard_generator.scenario_generator import (
+    ScenarioGenerator
+)
 
-## 실행
+from sara.sense.radar_sensor import (
+    RadarSensor
+)
 
-```bash
-pip install -r requirements.txt
-python main.py
+from sara.sense.object_detector import (
+    ObjectDetector
+)
 
----
+from sara.assess.sara_engine import (
+    SARAEngine
+)
 
-# main.py
+from sara.react.vehicle_controller import (
+    VehicleController
+)
 
-```python
-from simulator.carla_client import CarlaConnector
-from simulator.vehicle_manager import VehicleManager
-from simulator.pedestrian_manager import PedestrianManager
+from hara.hara_engine import (
+    HARAEngine
+)
 
-from sara.assess.risk_engine import RiskEngine
-from sara.react.emergency_brake import EmergencyBrake
+from hara.safety_goal_generator import (
+    SafetyGoalGenerator
+)
 
-import time
+from hara.scenario_risk_graph import (
+    ScenarioRiskGraph
+)
+
+from analytics.risk_logger import (
+    RiskLogger
+)
+
+from analytics.metrics_dashboard import (
+    MetricsDashboard
+)
+
+from analytics.scenario_recorder import (
+    ScenarioRecorder
+)
 
 
 def main():
-    connector = CarlaConnector()
 
-    world = connector.get_world()
+    print()
+    print("====================================")
+    print(" SARA-HARA SAFETY VALIDATION SYSTEM ")
+    print("====================================")
 
-    vehicle_manager = VehicleManager(world)
-    pedestrian_manager = PedestrianManager(world)
+    # =========================
+    # SIMULATOR INITIALIZATION
+    # =========================
 
-    vehicle = vehicle_manager.spawn_vehicle()
-    pedestrian = pedestrian_manager.spawn_pedestrian()
+    simulator = SimulationRunner()
 
-    risk_engine = RiskEngine()
-    brake_system = EmergencyBrake()
+    simulation_result = simulator.run()
 
-    while True:
-        vehicle_location = vehicle.get_location()
-        pedestrian_location = pedestrian.get_location()
+    # =========================
+    # AI HAZARD GENERATION
+    # =========================
 
-        risk_data = risk_engine.evaluate(
-            vehicle_location,
-            pedestrian_location,
-            vehicle_velocity=15.0,
-            pedestrian_velocity=1.2
+    scenario_generator = (
+        ScenarioGenerator()
+    )
+
+    scenario = (
+        scenario_generator.generate()
+    )
+
+    print()
+    print("===== GENERATED SCENARIO =====")
+    print(scenario)
+
+    # =========================
+    # SENSOR SYSTEM
+    # =========================
+
+    radar_sensor = (
+        RadarSensor()
+    )
+
+    object_detector = (
+        ObjectDetector()
+    )
+
+    radar_objects = (
+        radar_sensor.scan()
+    )
+
+    detected_objects = (
+        object_detector.detect(
+            radar_objects
+        )
+    )
+
+    print()
+    print("===== DETECTED OBJECTS =====")
+    print(detected_objects)
+
+    # =========================
+    # SARA ENGINE
+    # =========================
+
+    sara_engine = (
+        SARAEngine()
+    )
+
+    controller = (
+        VehicleController()
+    )
+
+    visibility = (
+        scenario["weather"][
+            "visibility_distance"
+        ]
+    )
+
+    sara_results = []
+
+    for obj in detected_objects:
+
+        sara_result = (
+            sara_engine.evaluate(
+                obj,
+                visibility
+            )
         )
 
-        print(risk_data)
+        sara_results.append(
+            sara_result
+        )
 
-        if risk_data["danger"]:
-            brake_system.apply(vehicle)
+        print()
+        print("===== SARA RESULT =====")
+        print(sara_result)
 
-        time.sleep(0.1)
+        vehicle = {
+            "speed": 72
+        }
+
+        controller.react(
+            sara_result,
+            vehicle
+        )
+
+    # 가장 위험한 객체 선택
+    sara_result = max(
+        sara_results,
+        key=lambda x:
+        x["risk_score"]
+    )
+
+    # =========================
+    # HARA ENGINE
+    # =========================
+
+    hara_engine = (
+        HARAEngine()
+    )
+
+    hara_result = (
+        hara_engine.evaluate(
+            scenario,
+            sara_result
+        )
+    )
+
+    print()
+    print("===== HARA RESULT =====")
+    print(hara_result)
+
+    # =========================
+    # SAFETY GOAL
+    # =========================
+
+    safety_goal_generator = (
+        SafetyGoalGenerator()
+    )
+
+    safety_goal = (
+        safety_goal_generator.generate(
+            hara_result
+        )
+    )
+
+    print()
+    print("===== SAFETY GOAL =====")
+    print(safety_goal)
+
+    # =========================
+    # RISK GRAPH
+    # =========================
+
+    risk_graph_engine = (
+        ScenarioRiskGraph()
+    )
+
+    risk_graph = (
+        risk_graph_engine.build_graph(
+            scenario,
+            sara_result,
+            hara_result
+        )
+    )
+
+    risk_graph_engine.visualize(
+        risk_graph
+    )
+
+    # =========================
+    # ANALYTICS
+    # =========================
+
+    logger = (
+        RiskLogger()
+    )
+
+    logger.save(
+        scenario,
+        sara_result,
+        hara_result
+    )
+
+    recorder = (
+        ScenarioRecorder()
+    )
+
+    recorder.record(
+        scenario
+    )
+
+    dashboard = (
+        MetricsDashboard()
+    )
+
+    dashboard.display(
+        sara_result,
+        hara_result
+    )
+
+    # =========================
+    # FINAL RESULT
+    # =========================
+
+    print()
+    print("================================")
+    print(" FINAL SAFETY VALIDATION RESULT ")
+    print("================================")
+
+    print()
+
+    print(
+        f"Scenario: "
+        f"{scenario['scenario_type']}"
+    )
+
+    print(
+        f"TTC: "
+        f"{sara_result['ttc']}"
+    )
+
+    print(
+        f"Risk Level: "
+        f"{sara_result['risk_level']}"
+    )
+
+    print(
+        f"Controllability: "
+        f"{hara_result['controllability']}"
+    )
+
+    print(
+        f"ASIL: "
+        f"{hara_result['asil']}"
+    )
+
+    print()
+
+    print("================================")
+
+    # =========================
+    # SHUTDOWN
+    # =========================
+
+    input(
+        "\nPress Enter to shutdown..."
+    )
+
+    simulator.shutdown()
 
 
 if __name__ == "__main__":
+
     main()

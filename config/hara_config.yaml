@@ -1,0 +1,41 @@
+id: "bn5h8o"
+hara:
+
+  severity:
+
+    low_speed_threshold: 40
+    high_speed_threshold: 60
+
+    dangerous_corner_cases:
+
+      - blind_spot_pedestrian
+      - wrong_way_vehicle
+      - sudden_vehicle_cutin
+
+  exposure:
+
+    medium_density: 20
+    high_density: 40
+
+    bad_weather:
+
+      - rain
+      - heavy_rain
+      - fog
+      - night_rain
+
+  controllability:
+
+    c3_ttc_threshold: 1.0
+    c2_ttc_threshold: 2.0
+
+    low_visibility_threshold: 15
+
+  asil_mapping:
+
+    S3_E4_C3: ASIL-D
+    S3_E4_C2: ASIL-C
+    S3_E3_C3: ASIL-C
+    S2_E3_C2: ASIL-B
+    S2_E2_C2: ASIL-A
+    S1_E1_C1: QM

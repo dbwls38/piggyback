@@ -1,30 +1,32 @@
-class NightRainScenario:
+class SensorFailureScenario:
 
     def __init__(self):
 
-        self.name = "night_rain"
+        self.name = (
+            "sensor_failure"
+        )
 
     def spawn(self):
 
         print()
 
         print(
-            "[SPAWN] Night rain"
+            "[SPAWN] Sensor failure"
         )
 
-        self.environment = {
+        self.sensor = {
 
-            "weather":
-                "night_rain",
+            "radar":
+                False,
 
-            "visibility":
-                15
+            "camera":
+                False
         }
 
         self.vehicle = {
 
             "speed":
-                60
+                50
         }
 
     def run(self):
@@ -32,19 +34,19 @@ class NightRainScenario:
         print()
 
         print(
-            "[RUNNING] Night rain"
+            "[RUNNING] Sensor failure"
         )
 
         return {
 
-            "environment":
-                self.environment,
+            "sensor":
+                self.sensor,
 
             "vehicle":
                 self.vehicle,
 
             "distance":
-                18
+                7
         }
 
     def evaluate(
@@ -56,8 +58,12 @@ class NightRainScenario:
         print()
 
         print(
-            f"Visibility Risk: "
-            f"{sara_result['risk_score']}"
+            "[CRITICAL SENSOR FAILURE]"
+        )
+
+        print(
+            f"Controllability: "
+            f"{hara_result['controllability']}"
         )
 
         print(

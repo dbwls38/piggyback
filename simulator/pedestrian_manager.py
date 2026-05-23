@@ -1,18 +1,75 @@
-import random
+import carla
 
 
-class PedestrianManager:
-    def __init__(self, world):
+class EnvironmentManager:
+
+    def __init__(
+        self,
+        world
+    ):
+
         self.world = world
-        self.blueprints = world.get_blueprint_library()
 
-    def spawn_pedestrian(self):
-        pedestrian_bp = self.blueprints.filter("walker.pedestrian.*")[0]
+    def set_clear_weather(self):
 
-        spawn_point = random.choice(
-            self.world.get_map().get_spawn_points()
+        weather = (
+            carla.WeatherParameters(
+                cloudiness=10,
+                precipitation=0,
+                fog_density=0,
+                wetness=0
+            )
         )
 
-        pedestrian = self.world.spawn_actor(pedestrian_bp, spawn_point)
+        self.world.set_weather(
+            weather
+        )
 
-        return pedestrian
+        print()
+
+        print(
+            "[WEATHER] CLEAR"
+        )
+
+    def set_rain_weather(self):
+
+        weather = (
+            carla.WeatherParameters(
+                cloudiness=90,
+                precipitation=80,
+                fog_density=20,
+                wetness=90
+            )
+        )
+
+        self.world.set_weather(
+            weather
+        )
+
+        print()
+
+        print(
+            "[WEATHER] RAIN"
+        )
+
+    def set_night_rain(self):
+
+        weather = (
+            carla.WeatherParameters(
+                cloudiness=100,
+                precipitation=90,
+                fog_density=40,
+                wetness=100,
+                sun_altitude_angle=-90
+            )
+        )
+
+        self.world.set_weather(
+            weather
+        )
+
+        print()
+
+        print(
+            "[WEATHER] NIGHT RAIN"
+        )

@@ -1,7 +1,5 @@
 from sara.assess.ttc_calculator import TTCCalculator
 
-
-
 def test_ttc_calculation():
     calc = TTCCalculator()
 
