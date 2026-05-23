@@ -1,20 +1,14 @@
 import random
 
-
 class PedestrianBehaviorAI:
-
     def generate(self):
 
         behaviors = [
 
             "normal_crossing",
-
             "jaywalking",
-
             "sudden_run",
-
             "phone_distracted",
-
             "slow_crossing"
         ]
 

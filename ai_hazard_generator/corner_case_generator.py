@@ -1,24 +1,15 @@
 import random
 
-
 class CornerCaseGenerator:
-
     def generate(self):
-
         corner_cases = [
 
             "pedestrian_occlusion",
-
             "sudden_vehicle_cutin",
-
             "sensor_failure",
-
             "traffic_light_failure",
-
             "blind_spot_pedestrian",
-
             "unexpected_braking",
-
             "wrong_way_vehicle"
         ]
 

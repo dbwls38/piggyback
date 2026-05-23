@@ -2,11 +2,8 @@ import json
 import os
 from datetime import datetime
 
-
 class RiskLogger:
-
     def __init__(self):
-
         self.log_dir = "logs/hara_logs"
 
         os.makedirs(

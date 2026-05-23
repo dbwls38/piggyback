@@ -2,10 +2,6 @@ from hara.dynamic_exposure_model import (
     DynamicExposureModel
 )
 
-from hara.probabilistic_hara import (
-    ProbabilisticHARA
-)
-
 from hara.scenario_risk_graph import (
     ScenarioRiskGraph
 )
@@ -73,37 +69,6 @@ print()
 print(
     f"Dynamic Exposure: {exposure}"
 )
-
-
-# Probabilistic HARA
-prob_hara = (
-    ProbabilisticHARA()
-)
-
-probability = (
-    prob_hara.calculate_risk_probability(
-        ttc=1.12,
-        speed=72,
-        visibility=18
-    )
-)
-
-risk_level = (
-    prob_hara.classify_probability(
-        probability
-    )
-)
-
-print(
-    f"Risk Probability: "
-    f"{probability}"
-)
-
-print(
-    f"Risk Level: "
-    f"{risk_level}"
-)
-
 
 # Risk Graph
 risk_graph = (

@@ -1,5 +1,4 @@
 class DynamicExposureModel:
-
     def calculate(
         self,
         scenario

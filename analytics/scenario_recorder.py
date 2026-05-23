@@ -2,9 +2,7 @@ import csv
 import os
 from datetime import datetime
 
-
 class ScenarioRecorder:
-
     def __init__(self):
 
         self.output_dir = (

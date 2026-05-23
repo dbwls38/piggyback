@@ -1,19 +1,15 @@
 from ai_hazard_generator.weather_generator import (
     WeatherGenerator
 )
-
 from ai_hazard_generator.pedestrian_behavior_ai import (
     PedestrianBehaviorAI
 )
-
 from ai_hazard_generator.traffic_pattern_generator import (
     TrafficPatternGenerator
 )
-
 from ai_hazard_generator.corner_case_generator import (
     CornerCaseGenerator
 )
-
 
 class ScenarioGenerator:
 

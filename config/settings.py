@@ -7,9 +7,7 @@ DANGER_TTC = 1.5
 
 import yaml
 
-
 class Settings:
-
     def __init__(self):
 
         with open(
@@ -23,5 +21,4 @@ class Settings:
             )
 
     def get(self):
-
         return self.config

@@ -1,20 +1,12 @@
 import random
 
-
 class TrafficPatternGenerator:
-
     def generate(self):
-
         traffic_patterns = [
-
             "light",
-
             "moderate",
-
             "heavy",
-
             "aggressive_cutin",
-
             "signal_violation"
         ]
 

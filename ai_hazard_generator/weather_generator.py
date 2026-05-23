@@ -1,22 +1,13 @@
 import random
 
-
 class WeatherGenerator:
-
     def generate(self):
-
         weather_conditions = [
-
             "clear",
-
             "rain",
-
             "heavy_rain",
-
             "fog",
-
             "night",
-
             "night_rain"
         ]
 
@@ -27,7 +18,6 @@ class WeatherGenerator:
         )
 
         weather = {
-
             "condition":
                 selected_weather,
 

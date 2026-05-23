@@ -1,19 +1,15 @@
 from analytics.risk_logger import (
     RiskLogger
 )
-
 from analytics.metrics_dashboard import (
     MetricsDashboard
 )
-
 from analytics.scenario_recorder import (
     ScenarioRecorder
 )
-
 from analytics.statistical_analyzer import (
     StatisticalAnalyzer
 )
-
 
 scenario = {
 
@@ -79,7 +75,6 @@ recorder.record(
     scenario
 )
 
-
 dashboard = MetricsDashboard()
 
 dashboard.display(
@@ -87,9 +82,7 @@ dashboard.display(
     hara_result
 )
 
-
 analyzer = StatisticalAnalyzer()
-
 analyzer.analyze(
     "logs/scenario_logs/scenario_records.csv"
 )

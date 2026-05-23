@@ -1,8 +1,6 @@
 import pandas as pd
 
-
 class StatisticalAnalyzer:
-
     def analyze(
         self,
         csv_path

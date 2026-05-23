@@ -2,9 +2,7 @@ from hara.iso26262_table import (
     ASIL_TABLE
 )
 
-
 class ASILClassifier:
-
     def classify(
         self,
         severity,

@@ -7,9 +7,7 @@ class MetricsDashboard:
     ):
 
         print()
-
         print("========== DASHBOARD ==========")
-
         print(
             f"TTC: "
             f"{sara_result['ttc']:.2f}"
