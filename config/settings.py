@@ -1,0 +1,6 @@
+CARLA_HOST = "localhost"
+CARLA_PORT = 2000
+
+SAFE_TTC = 5.0
+WARNING_TTC = 3.0
+DANGER_TTC = 1.5

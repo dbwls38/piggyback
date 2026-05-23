@@ -1,0 +1,5 @@
+weather: clear
+vehicle_speed: 35
+pedestrian_speed: 1.2
+night_mode: false
+rain: false
