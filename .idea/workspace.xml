@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="82d4719a-7152-425b-8c77-14fb26abbd18" name="변경" comment="start commit">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/scenario_config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/adapt/log_analyzer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/adapt/policy_updater.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/adapt/reinforcement_learning.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/assess/collision_predictor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/assess/risk_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/assess/safety_score.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/assess/ttc_calculator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/react/emergency_brake.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/react/steering_control.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/react/vehicle_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/sense/camera_sensor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/sense/lidar_sensor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sara/sense/object_detector.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulator/carla_client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulator/pedestrian_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulator/vehicle_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulator/world_manager.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "dbwls38"
+  }
+}]]></component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1779539518" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1779539517" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/dbwls38/piggyback.git",
+    "accountId": "c856455c-d65a-480d-a02c-0c147a759582"
+  }
+}]]></component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="3E7oQ0LXTrHlsIUH385JfrbP78r" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-024ed6589d45-c2ffad84badb-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-261.23567.174" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="82d4719a-7152-425b-8c77-14fb26abbd18" name="변경" comment="" />
+      <created>1779538949212</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1779538949212</updated>
+    </task>
+    <task id="LOCAL-00001" summary="start commit">
+      <option name="closed" value="true" />
+      <created>1779539172924</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1779539172924</updated>
+    </task>
+    <task id="LOCAL-00002" summary="start commit">
+      <option name="closed" value="true" />
+      <created>1779539408056</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779539408056</updated>
+    </task>
+    <task id="LOCAL-00003" summary="start commit">
+      <option name="closed" value="true" />
+      <created>1779539644590</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779539644590</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="ac3779fb-27a5-4da2-8f92-0768d59f3785" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="ac3779fb-27a5-4da2-8f92-0768d59f3785">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="start commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="start commit" />
+  </component>
+</project>
