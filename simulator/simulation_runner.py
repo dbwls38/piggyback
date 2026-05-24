@@ -8,7 +8,7 @@ class MyTestCase(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
-from simulator.carla_client import (
+from simulator.airsim_client import (
     CarlaClient
 )
 

@@ -1,5 +1,5 @@
-from simulator.simulation_runner import (
-    SimulationRunner
+from simulator.airsim_client import (
+    AirSimClient
 )
 
 from ai_hazard_generator.scenario_generator import (
@@ -8,6 +8,14 @@ from ai_hazard_generator.scenario_generator import (
 
 from sara.sense.radar_sensor import (
     RadarSensor
+)
+
+from sara.sense.camera_sensor import (
+    CameraSensor
+)
+
+from sara.sense.lidar_sensor import (
+    LidarSensor
 )
 
 from sara.sense.object_detector import (
@@ -51,20 +59,27 @@ def main():
 
     print()
     print("====================================")
-    print(" SARA-HARA SAFETY VALIDATION SYSTEM ")
+    print(" AIRSIM SARA-HARA SAFETY SYSTEM ")
     print("====================================")
 
-    # =========================
-    # SIMULATOR INITIALIZATION
-    # =========================
+    # ===================================
+    # AIRSIM INITIALIZATION
+    # ===================================
 
-    simulator = SimulationRunner()
+    simulator = AirSimClient()
 
-    simulation_result = simulator.run()
+    client = simulator.connect()
 
-    # =========================
-    # AI HAZARD GENERATION
-    # =========================
+    simulator.enable_api_control()
+
+    simulator.start()
+
+    print()
+    print("===== AIRSIM CONNECTED =====")
+
+    # ===================================
+    # AI SCENARIO GENERATION
+    # ===================================
 
     scenario_generator = (
         ScenarioGenerator()
@@ -78,25 +93,59 @@ def main():
     print("===== GENERATED SCENARIO =====")
     print(scenario)
 
-    # =========================
-    # SENSOR SYSTEM
-    # =========================
+    # ===================================
+    # APPLY ENVIRONMENT SETTINGS
+    # ===================================
+
+    simulator.apply_weather(
+        scenario["weather"]
+    )
+
+    simulator.spawn_scenario_objects(
+        scenario
+    )
+
+    # ===================================
+    # SENSOR INITIALIZATION
+    # ===================================
 
     radar_sensor = (
-        RadarSensor()
+        RadarSensor(client)
+    )
+
+    camera_sensor = (
+        CameraSensor(client)
+    )
+
+    lidar_sensor = (
+        LidarSensor(client)
     )
 
     object_detector = (
         ObjectDetector()
     )
 
+    # ===================================
+    # SENSOR DATA ACQUISITION
+    # ===================================
+
     radar_objects = (
         radar_sensor.scan()
     )
 
+    camera_frame = (
+        camera_sensor.capture()
+    )
+
+    lidar_points = (
+        lidar_sensor.get_point_cloud()
+    )
+
     detected_objects = (
         object_detector.detect(
-            radar_objects
+            radar_objects,
+            camera_frame,
+            lidar_points
         )
     )
 
@@ -104,16 +153,16 @@ def main():
     print("===== DETECTED OBJECTS =====")
     print(detected_objects)
 
-    # =========================
+    # ===================================
     # SARA ENGINE
-    # =========================
+    # ===================================
 
     sara_engine = (
         SARAEngine()
     )
 
     controller = (
-        VehicleController()
+        VehicleController(client)
     )
 
     visibility = (
@@ -141,25 +190,32 @@ def main():
         print("===== SARA RESULT =====")
         print(sara_result)
 
-        vehicle = {
-            "speed": 72
-        }
+        # ===================================
+        # VEHICLE REACTION
+        # ===================================
+
+        vehicle_state = (
+            simulator.get_vehicle_state()
+        )
 
         controller.react(
             sara_result,
-            vehicle
+            vehicle_state
         )
 
-    # 가장 위험한 객체 선택
+    # ===================================
+    # MOST DANGEROUS OBJECT
+    # ===================================
+
     sara_result = max(
         sara_results,
         key=lambda x:
         x["risk_score"]
     )
 
-    # =========================
+    # ===================================
     # HARA ENGINE
-    # =========================
+    # ===================================
 
     hara_engine = (
         HARAEngine()
@@ -176,9 +232,9 @@ def main():
     print("===== HARA RESULT =====")
     print(hara_result)
 
-    # =========================
-    # SAFETY GOAL
-    # =========================
+    # ===================================
+    # SAFETY GOAL GENERATION
+    # ===================================
 
     safety_goal_generator = (
         SafetyGoalGenerator()
@@ -194,9 +250,9 @@ def main():
     print("===== SAFETY GOAL =====")
     print(safety_goal)
 
-    # =========================
+    # ===================================
     # RISK GRAPH
-    # =========================
+    # ===================================
 
     risk_graph_engine = (
         ScenarioRiskGraph()
@@ -214,9 +270,9 @@ def main():
         risk_graph
     )
 
-    # =========================
+    # ===================================
     # ANALYTICS
-    # =========================
+    # ===================================
 
     logger = (
         RiskLogger()
@@ -245,9 +301,9 @@ def main():
         hara_result
     )
 
-    # =========================
+    # ===================================
     # FINAL RESULT
-    # =========================
+    # ===================================
 
     print()
     print("================================")
@@ -285,9 +341,9 @@ def main():
 
     print("================================")
 
-    # =========================
+    # ===================================
     # SHUTDOWN
-    # =========================
+    # ===================================
 
     input(
         "\nPress Enter to shutdown..."

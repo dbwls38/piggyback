@@ -1,4 +1,4 @@
-carla==0.9.15
+airsim
 numpy
 pandas
 opencv-python
@@ -9,3 +9,4 @@ matplotlib
 networkx
 flask
 flask-socketio
+pyyaml

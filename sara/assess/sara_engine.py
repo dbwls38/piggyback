@@ -1,107 +1,16 @@
-from sara.assess.ttc_calculator import (
-    TTCCalculator
-)
+class SaraEngine:
 
-from sara.assess.collision_predictor import (
-    CollisionPredictor
-)
+    def __init__(self,
+                 ttc_threshold=3.0):
 
-from sara.assess.risk_quantifier import (
-    RiskQuantifier
-)
+        self.ttc_threshold = ttc_threshold
 
-from sara.assess.controllability_estimator import (
-    ControllabilityEstimator
-)
+    def assess(self, ttc):
 
+        if ttc < 1.0:
+            return "CRITICAL"
 
-class SARAEngine:
+        if ttc < self.ttc_threshold:
+            return "DANGEROUS"
 
-    def __init__(self):
-
-        self.ttc_calculator = (
-            TTCCalculator()
-        )
-
-        self.collision_predictor = (
-            CollisionPredictor()
-        )
-
-        self.risk_quantifier = (
-            RiskQuantifier()
-        )
-
-        self.controllability_estimator = (
-            ControllabilityEstimator()
-        )
-
-    def evaluate(
-        self,
-        detected_object,
-        visibility
-    ):
-
-        distance = (
-            detected_object[
-                "distance"
-            ]
-        )
-
-        relative_speed = (
-            detected_object[
-                "relative_speed"
-            ]
-        )
-
-        ttc = (
-            self.ttc_calculator.calculate(
-                distance,
-                relative_speed
-            )
-        )
-
-        collision = (
-            self.collision_predictor.predict(
-                ttc
-            )
-        )
-
-        risk_score = (
-            self.risk_quantifier.quantify(
-                ttc,
-                collision[
-                    "probability"
-                ],
-                visibility
-            )
-        )
-
-        controllability = (
-            self.controllability_estimator.estimate(
-                ttc,
-                risk_score,
-                visibility
-            )
-        )
-
-        return {
-
-            "ttc":
-                ttc,
-
-            "collision_probability":
-                collision[
-                    "probability"
-                ],
-
-            "risk_level":
-                collision[
-                    "risk"
-                ],
-
-            "risk_score":
-                risk_score,
-
-            "controllability":
-                controllability
-        }
+        return "SAFE"

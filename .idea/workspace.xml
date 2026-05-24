@@ -6,22 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="82d4719a-7152-425b-8c77-14fb26abbd18" name="변경" comment="Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_hazard_generator/corner_case_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/corner_case_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_hazard_generator/pedestrian_behavior_ai.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/pedestrian_behavior_ai.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_hazard_generator/scenario_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/scenario_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_hazard_generator/traffic_pattern_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/traffic_pattern_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_hazard_generator/weather_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/weather_generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics/metrics_dashboard.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/metrics_dashboard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics/risk_logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/risk_logger.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics/scenario_recorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/scenario_recorder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics/statistical_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/statistical_analyzer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analytics/test_analytics.py" beforeDir="false" afterPath="$PROJECT_DIR$/analytics/test_analytics.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hara/asil_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/hara/asil_classifier.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hara/controllability_mapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/hara/controllability_mapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hara/dynamic_exposure_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/hara/dynamic_exposure_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hara/hara_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/hara/hara_engine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hara/test_advanced_hara.py" beforeDir="false" afterPath="$PROJECT_DIR$/hara/test_advanced_hara.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sara/assess/sara_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/assess/sara_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sara/assess/ttc_calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/assess/ttc_calculator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sara/react/vehicle_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/react/vehicle_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sara/sense/camera_sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/sense/camera_sensor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sara/sense/lidar_sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/sense/lidar_sensor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/right_turn_pedestrian.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenarios/right_turn_pedestrian.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/carla_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/airsim_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/simulation_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/simulation_runner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,25 +91,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PythonProject5" />
@@ -124,7 +117,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PYTHONPATH" value="C:\carla-0.9.15\PythonAPI\carla " />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="SDK_NAME" value="Python 3.13 (PythonProject1)" />
@@ -220,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779559936513</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1779560765334</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1779560765334</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,52 +1,11 @@
-from sara.react.emergency_brake import (
-    EmergencyBrake
-)
-
-from sara.react.evasive_steering import (
-    EvasiveSteering
-)
-
-
 class VehicleController:
 
-    def __init__(self):
+    def __init__(self, client):
+        self.client = client
 
-        self.brake = (
-            EmergencyBrake()
-        )
+    def emergency_stop(self):
 
-        self.steering = (
-            EvasiveSteering()
-        )
+        controls = airsim.CarControls()
+        controls.brake = 1.0
 
-    def react(
-        self,
-        sara_result,
-        vehicle
-    ):
-
-        controllability = (
-            sara_result[
-                "controllability"
-            ]
-        )
-
-        if controllability == "C3":
-
-            self.brake.activate(
-                vehicle
-            )
-
-            self.steering.avoid()
-
-        elif controllability == "C2":
-
-            self.brake.activate(
-                vehicle
-            )
-
-        else:
-
-            print(
-                "[SAFE DRIVING]"
-            )
+        self.client.setCarControls(controls)
