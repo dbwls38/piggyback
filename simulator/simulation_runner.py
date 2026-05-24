@@ -1,15 +1,5 @@
-import unittest
-
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
-
-
-if __name__ == '__main__':
-    unittest.main()
-
 from simulator.airsim_client import (
-    CarlaClient
+    AirSimClient
 )
 
 from simulator.scenario_loader import (
@@ -33,56 +23,218 @@ class SimulationRunner:
 
     def __init__(self):
 
-        self.client = CarlaClient()
+        # =====================================
+        # AIRSIM CLIENT
+        # =====================================
 
-        self.world = (
-            self.client.get_world()
+        self.simulator = (
+            AirSimClient()
         )
+
+
+
+        self.client = (
+            self.simulator.client
+        )
+
+        # =====================================
+        # MANAGERS
+        # =====================================
 
         self.loader = (
             ScenarioLoader(
-                self.world
+                self.client
             )
         )
 
         self.vehicle_manager = (
             VehicleManager(
-                self.world
+                self.client
             )
         )
 
+        self.vehicle_manager.run_demo()
+
         self.pedestrian_manager = (
             PedestrianManager(
-                self.world
+                self.client
             )
         )
 
         self.environment_manager = (
             EnvironmentManager(
-                self.world
+                self.client
             )
         )
 
-    def run(self):
+    # =====================================
+    # APPLY SCENARIO
+    # =====================================
 
-        # 맵 로드
-        self.loader.load_map(
-            "Town05"
+    def apply_scenario(
+        self,
+        scenario
+    ):
+
+        print()
+        print(
+            "===== APPLYING SCENARIO ====="
         )
 
-        # 날씨 설정
-        self.environment_manager.set_night_rain()
+        # =====================================
+        # WEATHER
+        # =====================================
 
-        # 차량 생성
+        weather = (
+            scenario["weather"]
+        )
+
+        condition = (
+            weather["condition"]
+        )
+
+        if condition == "clear":
+
+            self.environment_manager.set_clear_weather()
+
+        elif condition == "rain":
+
+            self.environment_manager.set_rain_weather()
+
+        elif condition == "night_rain":
+
+            self.environment_manager.set_night_rain()
+
+        elif condition == "fog":
+
+            self.environment_manager.set_fog_weather()
+
+        # =====================================
+        # VEHICLE SPEED
+        # =====================================
+
+        traffic = (
+            scenario["traffic"]
+        )
+
+        speed = (
+            traffic["average_speed"]
+        )
+
+        self.vehicle_manager.set_speed(
+            speed
+        )
+
+        # =====================================
+        # PEDESTRIAN
+        # =====================================
+
+        pedestrian = (
+            scenario["pedestrian"]
+        )
+
+        self.pedestrian_manager.apply_behavior(
+            pedestrian
+        )
+
+        # =====================================
+        # CORNER CASE
+        # =====================================
+
+        corner_case = (
+            scenario["corner_case"]
+        )
+
+        self.handle_corner_case(
+            corner_case
+        )
+
+        print()
+        print(
+            "[SCENARIO APPLIED]"
+        )
+
+    # =====================================
+    # HANDLE CORNER CASE
+    # =====================================
+
+    def handle_corner_case(
+        self,
+        corner_case
+    ):
+
+        case_type = (
+            corner_case["type"]
+        )
+
+        print()
+
+        print(
+            "[CORNER CASE]"
+        )
+
+        print(case_type)
+
+        if case_type == (
+            "sudden_vehicle_cutin"
+        ):
+
+            print(
+                "Simulating cut-in event"
+            )
+
+        elif case_type == (
+            "sensor_failure"
+        ):
+
+            print(
+                "Sensor failure injected"
+            )
+
+        elif case_type == (
+            "pedestrian_occlusion"
+        ):
+
+            print(
+                "Pedestrian occlusion detected"
+            )
+
+    # =====================================
+    # RUN SIMULATION
+    # =====================================
+
+    def run(self):
+
+        print()
+
+        print(
+            "[AIRSIM SIMULATION START]"
+        )
+
+        # =====================================
+        # MAP LOAD
+        # =====================================
+
+        self.loader.load_map(
+            "Blocks"
+        )
+
+        # =====================================
+        # VEHICLE CONTROL
+        # =====================================
+
         vehicle = (
             self.vehicle_manager.spawn_vehicle()
         )
 
-        self.vehicle_manager.set_autopilot(
-            True
-        )
+        self.vehicle_manager.enable_api_control()
 
-        # 보행자 생성
+        self.vehicle_manager.drive_forward()
+
+        # =====================================
+        # PEDESTRIAN
+        # =====================================
+
         pedestrian = (
             self.pedestrian_manager.spawn_pedestrian()
         )
@@ -102,9 +254,15 @@ class SimulationRunner:
                 pedestrian
         }
 
+    # =====================================
+    # SHUTDOWN
+    # =====================================
+
     def shutdown(self):
 
-        self.vehicle_manager.destroy_vehicle()
+        self.vehicle_manager.stop_vehicle()
+
+        self.vehicle_manager.disable_api_control()
 
         self.pedestrian_manager.destroy_all()
 

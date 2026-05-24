@@ -1,18 +1,20 @@
 import airsim
 
+
 class AirSimClient:
+
     def __init__(self):
+
         self.client = airsim.CarClient()
+
         self.client.confirmConnection()
-        self.client.enableApiControl(True)
 
-    def get_vehicle_state(self):
-        return self.client.getCarState()
+        self.client.enableApiControl(
+            True
+        )
 
-    def set_controls(self, throttle, steering, brake=0):
-        controls = airsim.CarControls()
-        controls.throttle = throttle
-        controls.steering = steering
-        controls.brake = brake
+        print()
 
-        self.client.setCarControls(controls)
+        print(
+            "AirSim Connected"
+        )

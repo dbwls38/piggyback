@@ -1,5 +1,5 @@
-from simulator.airsim_client import (
-    AirSimClient
+from simulator.simulation_runner import (
+    SimulationRunner
 )
 
 from ai_hazard_generator.scenario_generator import (
@@ -58,24 +58,38 @@ from analytics.scenario_recorder import (
 def main():
 
     print()
-    print("====================================")
-    print(" AIRSIM SARA-HARA SAFETY SYSTEM ")
-    print("====================================")
+    print(
+        "===================================="
+    )
+
+    print(
+        " AIRSIM SARA-HARA SAFETY SYSTEM "
+    )
+
+    print(
+        "===================================="
+    )
 
     # ===================================
-    # AIRSIM INITIALIZATION
+    # SIMULATION RUNNER
     # ===================================
 
-    simulator = AirSimClient()
+    runner = (
+        SimulationRunner()
+    )
 
-    client = simulator.connect()
+    simulator = (
+        runner.simulator
+    )
 
-    simulator.enable_api_control()
-
-    simulator.start()
+    client = (
+        simulator.client
+    )
 
     print()
-    print("===== AIRSIM CONNECTED =====")
+    print(
+        "===== AIRSIM CONNECTED ====="
+    )
 
     # ===================================
     # AI SCENARIO GENERATION
@@ -90,20 +104,25 @@ def main():
     )
 
     print()
-    print("===== GENERATED SCENARIO =====")
+    print(
+        "===== GENERATED SCENARIO ====="
+    )
+
     print(scenario)
 
     # ===================================
-    # APPLY ENVIRONMENT SETTINGS
+    # APPLY SCENARIO
     # ===================================
 
-    simulator.apply_weather(
-        scenario["weather"]
-    )
-
-    simulator.spawn_scenario_objects(
+    runner.apply_scenario(
         scenario
     )
+
+    # ===================================
+    # START SIMULATION
+    # ===================================
+
+    runner.run()
 
     # ===================================
     # SENSOR INITIALIZATION
@@ -150,7 +169,10 @@ def main():
     )
 
     print()
-    print("===== DETECTED OBJECTS =====")
+    print(
+        "===== DETECTED OBJECTS ====="
+    )
+
     print(detected_objects)
 
     # ===================================
@@ -158,7 +180,7 @@ def main():
     # ===================================
 
     sara_engine = (
-        SaraEngine
+        SaraEngine()
     )
 
     controller = (
@@ -187,7 +209,10 @@ def main():
         )
 
         print()
-        print("===== SARA RESULT =====")
+        print(
+            "===== SARA RESULT ====="
+        )
+
         print(sara_result)
 
         # ===================================
@@ -229,7 +254,10 @@ def main():
     )
 
     print()
-    print("===== HARA RESULT =====")
+    print(
+        "===== HARA RESULT ====="
+    )
+
     print(hara_result)
 
     # ===================================
@@ -247,7 +275,10 @@ def main():
     )
 
     print()
-    print("===== SAFETY GOAL =====")
+    print(
+        "===== SAFETY GOAL ====="
+    )
+
     print(safety_goal)
 
     # ===================================
@@ -306,9 +337,17 @@ def main():
     # ===================================
 
     print()
-    print("================================")
-    print(" FINAL SAFETY VALIDATION RESULT ")
-    print("================================")
+    print(
+        "================================"
+    )
+
+    print(
+        " FINAL SAFETY VALIDATION RESULT "
+    )
+
+    print(
+        "================================"
+    )
 
     print()
 
@@ -339,7 +378,9 @@ def main():
 
     print()
 
-    print("================================")
+    print(
+        "================================"
+    )
 
     # ===================================
     # SHUTDOWN
@@ -349,7 +390,7 @@ def main():
         "\nPress Enter to shutdown..."
     )
 
-    simulator.shutdown()
+    runner.shutdown()
 
 
 if __name__ == "__main__":

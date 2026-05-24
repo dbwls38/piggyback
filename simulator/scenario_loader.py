@@ -1,5 +1,4 @@
 class ScenarioLoader:
-
     def __init__(
         self,
         world

@@ -1,3 +1,5 @@
+import airsim
+import time
 import random
 
 
@@ -5,77 +7,229 @@ class VehicleManager:
 
     def __init__(
         self,
-        world
+        client
     ):
 
-        self.world = world
+        self.client = client
 
-        self.vehicle = None
+    # =====================================
+    # ENABLE API CONTROL
+    # =====================================
 
-    def spawn_vehicle(self):
+    def enable_api_control(self):
 
-        blueprint_library = (
-            self.world.get_blueprint_library()
-        )
-
-        vehicle_bp = (
-            blueprint_library.filter(
-                "vehicle.*"
-            )[0]
-        )
-
-        spawn_points = (
-            self.world.get_map()
-            .get_spawn_points()
-        )
-
-        spawn_point = (
-            random.choice(
-                spawn_points
-            )
-        )
-
-        self.vehicle = (
-            self.world.spawn_actor(
-                vehicle_bp,
-                spawn_point
-            )
+        self.client.enableApiControl(
+            True
         )
 
         print()
 
         print(
-            "[VEHICLE SPAWNED]"
+            "[API CONTROL ENABLED]"
         )
 
-        return self.vehicle
+    # =====================================
+    # DRIVE FORWARD
+    # =====================================
 
-    def set_autopilot(
+    def drive_forward(self):
+
+        controls = (
+            airsim.CarControls()
+        )
+
+        controls.throttle = 0.7
+
+        self.client.setCarControls(
+            controls
+        )
+
+        print()
+
+        print(
+            "[VEHICLE MOVING FORWARD]"
+        )
+
+    # =====================================
+    # TURN RIGHT
+    # =====================================
+
+    def right_turn(self):
+
+        controls = (
+            airsim.CarControls()
+        )
+
+        controls.throttle = 0.5
+
+        controls.steering = 0.6
+
+        self.client.setCarControls(
+            controls
+        )
+
+        print()
+
+        print(
+            "[RIGHT TURN]"
+        )
+
+    # =====================================
+    # AGGRESSIVE CUT-IN
+    # =====================================
+
+    def aggressive_cutin(self):
+
+        controls = (
+            airsim.CarControls()
+        )
+
+        controls.throttle = 0.9
+
+        controls.steering = random.uniform(
+            -0.8,
+            0.8
+        )
+
+        self.client.setCarControls(
+            controls
+        )
+
+        print()
+
+        print(
+            "[AGGRESSIVE CUT-IN]"
+        )
+
+    # =====================================
+    # EMERGENCY BRAKE
+    # =====================================
+
+    def emergency_brake(self):
+
+        controls = (
+            airsim.CarControls()
+        )
+
+        controls.throttle = 0.0
+
+        controls.brake = 1.0
+
+        self.client.setCarControls(
+            controls
+        )
+
+        print()
+
+        print(
+            "[EMERGENCY BRAKE]"
+        )
+
+    # =====================================
+    # SET SPEED
+    # =====================================
+
+    def set_speed(
         self,
-        enabled=True
+        speed_kmh
     ):
 
-        if self.vehicle:
+        controls = (
+            airsim.CarControls()
+        )
 
-            self.vehicle.set_autopilot(
-                enabled
-            )
+        throttle = min(
+            speed_kmh / 40,
+            1.0
+        )
 
-            print()
+        controls.throttle = (
+            throttle
+        )
 
-            print(
-                f"[AUTOPILOT] "
-                f"{enabled}"
-            )
+        self.client.setCarControls(
+            controls
+        )
 
-    def destroy_vehicle(self):
+        print()
 
-        if self.vehicle:
+        print(
+            f"[VEHICLE SPEED] "
+            f"{speed_kmh} km/h"
+        )
 
-            self.vehicle.destroy()
+    # =====================================
+    # DEMO SCENARIO
+    # =====================================
 
-            print()
+    def run_demo(self):
 
-            print(
-                "[VEHICLE DESTROYED]"
-            )
+        print()
+
+        print(
+            "===== DEMO START ====="
+        )
+
+        # 직진
+        self.drive_forward()
+
+        time.sleep(3)
+
+        # 우회전
+        self.right_turn()
+
+        time.sleep(3)
+
+        # 위험 cut-in
+        self.aggressive_cutin()
+
+        time.sleep(3)
+
+        # 긴급 제동
+        self.emergency_brake()
+
+        print()
+
+        print(
+            "===== DEMO END ====="
+        )
+
+    # =====================================
+    # STOP VEHICLE
+    # =====================================
+
+    def stop_vehicle(self):
+
+        controls = (
+            airsim.CarControls()
+        )
+
+        controls.throttle = 0.0
+
+        controls.brake = 1.0
+
+        self.client.setCarControls(
+            controls
+        )
+
+        print()
+
+        print(
+            "[VEHICLE STOPPED]"
+        )
+
+    # =====================================
+    # DISABLE API CONTROL
+    # =====================================
+
+    def disable_api_control(self):
+
+        self.client.enableApiControl(
+            False
+        )
+
+        print()
+
+        print(
+            "[API CONTROL DISABLED]"
+        )
