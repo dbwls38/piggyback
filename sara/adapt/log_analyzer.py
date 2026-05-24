@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 class LogAnalyzer:
     def analyze(self, log_path):
         df = pd.read_csv(log_path)

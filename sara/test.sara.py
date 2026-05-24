@@ -7,7 +7,7 @@ from sara.sense.object_detector import (
 )
 
 from sara.assess.sara_engine import (
-    SARAEngine
+    SaraEngine
 )
 
 from sara.react.vehicle_controller import (
@@ -19,7 +19,7 @@ radar = RadarSensor()
 
 detector = ObjectDetector()
 
-engine = SARAEngine()
+engine = SaraEngine()
 
 controller = VehicleController()
 

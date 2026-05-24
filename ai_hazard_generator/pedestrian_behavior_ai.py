@@ -1,5 +1,4 @@
 import random
-
 class PedestrianBehaviorAI:
     def generate(self):
 

@@ -23,7 +23,7 @@ from sara.sense.object_detector import (
 )
 
 from sara.assess.sara_engine import (
-    SARAEngine
+    SaraEngine
 )
 
 from sara.react.vehicle_controller import (
@@ -158,7 +158,7 @@ def main():
     # ===================================
 
     sara_engine = (
-        SARAEngine()
+        SaraEngine
     )
 
     controller = (

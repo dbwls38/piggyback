@@ -9,6 +9,7 @@ class SaraEngine:
 
         if ttc < 1.0:
             return "CRITICAL"
+        
 
         if ttc < self.ttc_threshold:
             return "DANGEROUS"

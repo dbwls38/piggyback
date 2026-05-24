@@ -1,11 +1,22 @@
-import carla
-
-
+import airsim
 class EmergencyBrake:
-    def apply(self, vehicle):
-        control = carla.VehicleControl()
-        control.brake = 1.0
 
-        vehicle.apply_control(control)
+    def __init__(self, client):
 
-        print("EMERGENCY BRAKE ACTIVATED")
+        self.client = client
+
+    def apply(self):
+
+        controls = airsim.CarControls()
+
+        controls.throttle = 0.0
+        controls.brake = 1.0
+        controls.steering = 0.0
+
+        self.client.setCarControls(
+            controls
+        )
+
+        print(
+            "EMERGENCY BRAKE ACTIVATED"
+        )
