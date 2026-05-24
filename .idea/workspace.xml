@@ -5,17 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82d4719a-7152-425b-8c77-14fb26abbd18" name="변경" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/AirSimRunner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/simulation_core.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/simulator/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/backend/services/airsim_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/backend/services/hara_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/backend/services/scenario_engine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/frontend/Dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/frontend/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/shared/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/react/vehicle_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/react/vehicle_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/airsim_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/airsim_client.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/environment_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/environment_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/pedestrian_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/pedestrian_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/scenario_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/scenario_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/simulation_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/simulation_runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/simulator/vehicle_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/vehicle_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/backend/api_routes.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/backend/app.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/backend/websocket_server.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +100,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python 테스트.pyqt.py 내 Python 테스트.executor": "Run",
     "Python.main.executor": "Run",
     "Python.radar_sensor.executor": "Run",
     "Python.vehicle_controller.executor": "Run",
@@ -113,7 +119,14 @@
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dbjin\PycharmProjects\PythonProject5\src" />
+      <recent name="C:\Users\dbjin\PycharmProjects\PythonProject5" />
+      <recent name="C:\Users\dbjin\PycharmProjects\PythonProject5\simulator" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python 테스트.C:/Users/dbjin/PycharmProjects/PythonProject5/ui/backend/pyqt.py 내 Python 테스트">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python">
       <module name="PythonProject5" />
       <option name="ENV_FILES" value="" />
@@ -130,7 +143,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\dbjin\PycharmProjects\PythonProject5\simulator\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -212,14 +225,33 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="C:/Users/dbjin/PycharmProjects/PythonProject5/ui/backend/pyqt.py 내 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject5" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/ui/backend/pyqt.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.main" />
       <item itemvalue="Python.radar_sensor" />
       <item itemvalue="Python.vehicle_controller" />
       <item itemvalue="Python.mained" />
+      <item itemvalue="Python 테스트.C:/Users/dbjin/PycharmProjects/PythonProject5/ui/backend/pyqt.py 내 Python 테스트" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python 테스트.C:/Users/dbjin/PycharmProjects/PythonProject5/ui/backend/pyqt.py 내 Python 테스트" />
         <item itemvalue="Python.radar_sensor" />
         <item itemvalue="Python.vehicle_controller" />
         <item itemvalue="Python.mained" />
@@ -321,7 +353,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779636352713</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1779641687205</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1779641687205</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,5 +395,16 @@
     <MESSAGE value="Merge branch 'main' of https://github.com/dbwls38/piggyback" />
     <MESSAGE value="Commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/api.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
