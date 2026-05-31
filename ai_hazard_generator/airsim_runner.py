@@ -1,19 +1,12 @@
 import airsim
-
-
 class AirSimRunner:
-
     def __init__(self):
-
         self.client = airsim.CarClient()
-
         self.client.confirmConnection()
-
         self.client.enableApiControl(True)
 
         print()
         print("AirSim Connected")
-
     # =====================================
     # APPLY WEATHER
     # =====================================
@@ -198,9 +191,7 @@ class AirSimRunner:
     def shutdown(self):
 
         controls = airsim.CarControls()
-
         controls.throttle = 0.0
-
         controls.brake = 1.0
 
         self.client.setCarControls(

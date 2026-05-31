@@ -5,22 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="82d4719a-7152-425b-8c77-14fb26abbd18" name="변경" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/simulation_core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/simulator/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/backend/services/airsim_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/backend/services/hara_engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/backend/services/scenario_engine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/frontend/Dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/frontend/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ui/shared/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/test_pedestrian.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/test_scenario.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/test_traffic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/test_weather.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/backend/api_routes.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/backend/app.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/backend/websocket_server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai_hazard_generator/AirSimRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/airsim_runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/frontend/Dashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/frontend/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/frontend/public" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/test_AirSimRunner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/frontend/src" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/test_corner_case.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +95,177 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "Python 테스트.pyqt.py 내 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyScenario.test_apply_vehicle_speed_is_called의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyScenario.test_apply_weather_is_called의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyScenario.test_full_scenario_no_exception의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyScenario의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyVehicleSpeed.test_50kmh_throttle_is_0_5의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyVehicleSpeed.test_exactly_100kmh_throttle_is_1의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyVehicleSpeed.test_set_car_controls_is_called의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyVehicleSpeed.test_throttle_capped_at_1의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyVehicleSpeed.test_zero_speed_throttle_is_zero의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyVehicleSpeed의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyWeather.test_always_enables_weather_sim의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyWeather.test_clear_resets_rain_and_fog의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyWeather.test_fog_sets_fog_value의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyWeather.test_night_sets_time_of_day의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyWeather.test_rain_sets_rain_and_roadwetness의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyWeather.test_unknown_condition_does_not_raise의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestApplyWeather의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestInit.test_api_control_enabled의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestInit.test_confirm_connection_called의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestInit의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestShutdown.test_api_control_disabled의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestShutdown.test_brake_set_to_one의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestShutdown.test_set_car_controls_called의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestShutdown.test_throttle_set_to_zero의 Python 테스트.executor": "Run",
+    "Python 테스트.test_AirSimRunner.TestShutdown의 Python 테스트.executor": "Run",
+    "Python 테스트.test_airsimrunner.TestApplyScenario의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateRepeatability.test_generate_called_multiple_times의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateRepeatability.test_generate_covers_all_risk_levels_eventually의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateRepeatability.test_generate_covers_all_types_eventually의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateRepeatability의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateReturnStructure.test_has_risk_level_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateReturnStructure.test_has_type_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateReturnStructure.test_no_extra_keys의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateReturnStructure.test_returns_dict의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateReturnStructure의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateValues.test_risk_level_is_string의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateValues.test_risk_level_is_valid의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateValues.test_type_is_string의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateValues.test_type_is_valid의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateValues의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateWithMockedRandom.test_generate_returns_mocked_type의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateWithMockedRandom.test_mocked_output_matches의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestGenerateWithMockedRandom의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestRandomChoiceCalled.test_first_call_uses_corner_case_list의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestRandomChoiceCalled.test_random_choice_called_twice의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestRandomChoiceCalled.test_second_call_uses_risk_level_list의 Python 테스트.executor": "Run",
+    "Python 테스트.test_corner_case.TestRandomChoiceCalled의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestGenerateWithMockedRandom.test_mocked_output_matches의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestGenerateWithMockedRandom.test_speed_is_rounded_from_uniform의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestGenerateWithMockedRandom의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestRandomCalled.test_first_choice_uses_behavior_list의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestRandomCalled.test_random_choice_called_twice의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestRandomCalled.test_random_uniform_called_once의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestRandomCalled.test_random_uniform_called_with_correct_range의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestRandomCalled.test_second_choice_uses_visibility_list의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestRandomCalled의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestRepeatability.test_always_returns_valid_result의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestRepeatability.test_covers_all_behaviors의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestRepeatability.test_covers_all_visibilities의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestRepeatability.test_speed_range_boundary의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestRepeatability의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnStructure.test_has_behavior_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnStructure.test_has_speed_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnStructure.test_has_visibility_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnStructure.test_no_extra_keys의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnStructure.test_returns_dict의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnStructure의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnValues.test_behavior_is_string의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnValues.test_behavior_is_valid의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnValues.test_speed_is_float의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnValues.test_speed_rounded_to_2_decimal의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnValues.test_speed_within_range의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnValues.test_visibility_is_string의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnValues.test_visibility_is_valid의 Python 테스트.executor": "Run",
+    "Python 테스트.test_pedestrian.TestReturnValues의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestInit.test_corner_case_generator_created의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestInit.test_pedestrian_ai_created의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestInit.test_traffic_generator_created의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestInit.test_weather_generator_created의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestInit의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestRepeatability.test_each_call_returns_independent_result의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestRepeatability.test_generate_called_multiple_times의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestRepeatability.test_sub_generators_called_n_times의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestRepeatability의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnStructure.test_has_corner_case_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnStructure.test_has_pedestrian_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnStructure.test_has_scenario_type_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnStructure.test_has_traffic_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnStructure.test_has_weather_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnStructure.test_no_extra_keys의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnStructure.test_returns_dict의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnStructure의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnValues.test_corner_case_comes_from_corner_case_generator의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnValues.test_corner_case_is_dict의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnValues.test_pedestrian_comes_from_pedestrian_ai의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnValues.test_pedestrian_is_dict의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnValues.test_scenario_type_is_right_turn_pedestrian의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnValues.test_scenario_type_is_string의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnValues.test_traffic_comes_from_traffic_generator의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnValues.test_traffic_is_dict의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnValues.test_weather_comes_from_weather_generator의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnValues.test_weather_is_dict의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestReturnValues의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestSubGeneratorCalled.test_all_sub_generators_called_exactly_once의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestSubGeneratorCalled.test_corner_case_generate_called의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestSubGeneratorCalled.test_pedestrian_generate_called의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestSubGeneratorCalled.test_traffic_generate_called의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestSubGeneratorCalled.test_weather_generate_called의 Python 테스트.executor": "Run",
+    "Python 테스트.test_scenario.TestSubGeneratorCalled의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestGenerateWithMockedRandom.test_density_boundary_max의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestGenerateWithMockedRandom.test_density_boundary_min의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestGenerateWithMockedRandom.test_mocked_output_matches의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestGenerateWithMockedRandom.test_speed_boundary_max의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestGenerateWithMockedRandom.test_speed_boundary_min의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestGenerateWithMockedRandom의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestRandomCalled.test_first_randint_uses_density_range의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestRandomCalled.test_random_choice_called_once의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestRandomCalled.test_random_choice_uses_pattern_list의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestRandomCalled.test_random_randint_called_twice의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestRandomCalled.test_second_randint_uses_speed_range의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestRandomCalled의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestRepeatability.test_always_returns_valid_result의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestRepeatability.test_average_speed_range_boundary의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestRepeatability.test_covers_all_patterns의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestRepeatability.test_vehicle_density_range_boundary의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestRepeatability의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnStructure.test_has_average_speed_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnStructure.test_has_pattern_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnStructure.test_has_vehicle_density_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnStructure.test_no_extra_keys의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnStructure.test_returns_dict의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnStructure의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnValues.test_average_speed_is_int의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnValues.test_average_speed_within_range의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnValues.test_pattern_is_string의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnValues.test_pattern_is_valid의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnValues.test_vehicle_density_is_int의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnValues.test_vehicle_density_within_range의 Python 테스트.executor": "Run",
+    "Python 테스트.test_traffic.TestReturnValues의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestGenerateWithMockedRandom.test_mocked_output_matches의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestGenerateWithMockedRandom.test_road_friction_is_rounded_from_uniform의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestGenerateWithMockedRandom.test_visibility_distance_boundary_max의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestGenerateWithMockedRandom.test_visibility_distance_boundary_min의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestGenerateWithMockedRandom의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestRandomCalled.test_random_choice_called_once의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestRandomCalled.test_random_choice_uses_condition_list의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestRandomCalled.test_random_randint_called_once의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestRandomCalled.test_random_randint_called_with_correct_range의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestRandomCalled.test_random_uniform_called_once의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestRandomCalled.test_random_uniform_called_with_correct_range의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestRandomCalled의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestRepeatability.test_always_returns_valid_result의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestRepeatability.test_covers_all_conditions의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestRepeatability.test_road_friction_range_boundary의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestRepeatability.test_visibility_distance_range_boundary의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestRepeatability의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnStructure.test_has_condition_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnStructure.test_has_road_friction_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnStructure.test_has_visibility_distance_key의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnStructure.test_no_extra_keys의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnStructure.test_returns_dict의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnStructure의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnValues.test_condition_is_string의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnValues.test_condition_is_valid의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnValues.test_road_friction_is_float의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnValues.test_road_friction_rounded_to_2_decimal의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnValues.test_road_friction_within_range의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnValues.test_visibility_distance_is_int의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnValues.test_visibility_distance_within_range의 Python 테스트.executor": "Run",
+    "Python 테스트.test_weather.TestReturnValues의 Python 테스트.executor": "Run",
+    "Python.main (1).executor": "Debug",
     "Python.main.executor": "Run",
     "Python.radar_sensor.executor": "Run",
     "Python.vehicle_controller.executor": "Run",
@@ -126,7 +291,7 @@
       <recent name="C:\Users\dbjin\PycharmProjects\PythonProject5\simulator" />
     </key>
   </component>
-  <component name="RunManager" selected="Python 테스트.C:/Users/dbjin/PycharmProjects/PythonProject5/ui/backend/pyqt.py 내 Python 테스트">
+  <component name="RunManager" selected="Python 테스트.test_scenario.TestRepeatability.test_each_call_returns_independent_result의 Python 테스트">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python">
       <module name="PythonProject5" />
       <option name="ENV_FILES" value="" />
@@ -152,109 +317,106 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mained" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PythonProject5" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONPATH" value="C:\carla-0.9.15\PythonAPI\carla " />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="SDK_NAME" value="Python 3.13 (PythonProject1)" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="true" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="radar_sensor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PythonProject5" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sara/sense" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sara/sense/radar_sensor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="vehicle_controller" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PythonProject5" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sara/react" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sara/react/vehicle_controller.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="C:/Users/dbjin/PycharmProjects/PythonProject5/ui/backend/pyqt.py 내 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="test_scenario.TestRepeatability의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="PythonProject5" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ai_hazard_generator" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="DEBUG_JUST_MY_CODE" value="false" />
       <option name="RUN_TOOL" value="" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/ui/backend/pyqt.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="_new_target" value="&quot;test_scenario.TestRepeatability&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_scenario.TestRepeatability.test_each_call_returns_independent_result의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject5" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ai_hazard_generator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_scenario.TestRepeatability.test_each_call_returns_independent_result&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_scenario.TestRepeatability.test_generate_called_multiple_times의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject5" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ai_hazard_generator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_scenario.TestRepeatability.test_generate_called_multiple_times&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_scenario.TestRepeatability.test_sub_generators_called_n_times의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject5" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ai_hazard_generator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_scenario.TestRepeatability.test_sub_generators_called_n_times&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_scenario.TestReturnValues.test_corner_case_is_dict의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject5" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ai_hazard_generator" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_scenario.TestReturnValues.test_corner_case_is_dict&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.radar_sensor" />
-      <item itemvalue="Python.vehicle_controller" />
-      <item itemvalue="Python.mained" />
-      <item itemvalue="Python 테스트.C:/Users/dbjin/PycharmProjects/PythonProject5/ui/backend/pyqt.py 내 Python 테스트" />
+      <item itemvalue="Python 테스트.test_scenario.TestRepeatability.test_each_call_returns_independent_result의 Python 테스트" />
+      <item itemvalue="Python 테스트.test_scenario.TestRepeatability.test_generate_called_multiple_times의 Python 테스트" />
+      <item itemvalue="Python 테스트.test_scenario.TestRepeatability.test_sub_generators_called_n_times의 Python 테스트" />
+      <item itemvalue="Python 테스트.test_scenario.TestRepeatability의 Python 테스트" />
+      <item itemvalue="Python 테스트.test_scenario.TestReturnValues.test_corner_case_is_dict의 Python 테스트" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python 테스트.C:/Users/dbjin/PycharmProjects/PythonProject5/ui/backend/pyqt.py 내 Python 테스트" />
-        <item itemvalue="Python.radar_sensor" />
-        <item itemvalue="Python.vehicle_controller" />
-        <item itemvalue="Python.mained" />
+        <item itemvalue="Python 테스트.test_scenario.TestRepeatability.test_each_call_returns_independent_result의 Python 테스트" />
+        <item itemvalue="Python 테스트.test_scenario.TestRepeatability.test_sub_generators_called_n_times의 Python 테스트" />
+        <item itemvalue="Python 테스트.test_scenario.TestRepeatability.test_generate_called_multiple_times의 Python 테스트" />
+        <item itemvalue="Python 테스트.test_scenario.TestRepeatability의 Python 테스트" />
+        <item itemvalue="Python 테스트.test_scenario.TestReturnValues.test_corner_case_is_dict의 Python 테스트" />
       </list>
     </recent_temporary>
   </component>
@@ -361,7 +523,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779641687205</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1779648379663</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1779648379663</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,9 +570,134 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/api.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/simulator/main.py</url>
+          <line>395</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_AirSimRunner.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_AirSimRunner.py</url>
+          <line>142</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_AirSimRunner.py</url>
+          <line>234</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_corner_case.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_corner_case.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_corner_case.py</url>
+          <line>135</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_pedestrian.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_pedestrian.py</url>
+          <line>29</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_pedestrian.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_pedestrian.py</url>
+          <line>47</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_pedestrian.py</url>
+          <line>65</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_weather.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_weather.py</url>
+          <line>129</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_weather.py</url>
+          <line>140</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_weather.py</url>
+          <line>260</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_traffic.py</url>
+          <line>81</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_traffic.py</url>
+          <line>87</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_traffic.py</url>
+          <line>97</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_traffic.py</url>
+          <line>217</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_scenario.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_scenario.py</url>
+          <line>138</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_scenario.py</url>
+          <line>145</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_scenario.py</url>
+          <line>165</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_scenario.py</url>
+          <line>170</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ai_hazard_generator/test_scenario.py</url>
+          <line>182</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
