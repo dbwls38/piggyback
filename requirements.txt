@@ -2,6 +2,7 @@ airsim
 numpy
 pandas
 opencv-python
+stable-baselines3
 torch
 ultralytics
 pygame

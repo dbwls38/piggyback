@@ -11,7 +11,7 @@ class SensorFailureScenario:
         print()
 
         print(
-            "[SPAWN] Sensor failure"
+            "[SPAWN] TestSensor failure"
         )
 
         self.sensor = {
@@ -34,7 +34,7 @@ class SensorFailureScenario:
         print()
 
         print(
-            "[RUNNING] Sensor failure"
+            "[RUNNING] TestSensor failure"
         )
 
         return {

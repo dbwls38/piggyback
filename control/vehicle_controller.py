@@ -27,7 +27,7 @@ class VehicleController:
 if __name__ == "__main__":
     import time
 
-    from simulator.airsim_client import (
+    from SimulationRunner.airsim_client import (
         AirSimClient
     )
 
