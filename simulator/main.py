@@ -6,19 +6,19 @@ from ai_hazard_generator.scenario_generator import (
     ScenarioGenerator
 )
 
-from sara.sense.radar_sensor import (
+from Sensor.radar_sensor import (
     RadarSensor
 )
 
-from sara.sense.camera_sensor import (
+from Sensor.camera_sensor import (
     CameraSensor
 )
 
-from sara.sense.lidar_sensor import (
+from Sensor.lidar_sensor import (
     LidarSensor
 )
 
-from sara.sense.object_detector import (
+from Sensor.object_detector import (
     ObjectDetector
 )
 
@@ -26,7 +26,7 @@ from sara.assess.sara_engine import (
     SaraEngine
 )
 
-from sara.react.vehicle_controller import (
+from control.vehicle_controller import (
     VehicleController
 )
 

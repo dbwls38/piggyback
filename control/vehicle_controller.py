@@ -31,7 +31,7 @@ if __name__ == "__main__":
         AirSimClient
     )
 
-    from sara.react.vehicle_controller import (
+    from control.vehicle_controller import (
         VehicleController
     )
 
