@@ -2,53 +2,26 @@ import airsim
 class VehicleController:
 
     def __init__(self, client):
-
         self.client = client
 
-    def drive_backward(self):
+    def react(self, result, vehicle_state):
 
-        controls = airsim.CarControls()
+        risk = result["risk_score"]
+        level = result["level"]
 
-        controls.throttle = 0.5
+        if level == "CRITICAL":
+            control = airsim.CarControls()
+            control.throttle = 0
+            control.brake = 1
 
-        self.client.setCarControls(
-            controls
-        )
+        elif level == "DANGEROUS":
+            control = airsim.CarControls()
+            control.throttle = 0.2
+            control.brake = 0.5
 
-    def brake(self):
+        else:
+            control = airsim.CarControls()
+            control.throttle = 0.6
+            control.brake = 0
 
-        controls = airsim.CarControls()
-
-        controls.brake = 1.0
-
-        self.client.setCarControls(
-            controls
-        )
-if __name__ == "__main__":
-    import time
-
-    from SimulationRunner.airsim_client import (
-        AirSimClient
-    )
-
-    from control.vehicle_controller import (
-        VehicleController
-    )
-
-    simulator = AirSimClient()
-
-    client = simulator.client
-
-    controller = VehicleController(
-        client
-    )
-
-    print("START")
-
-    controller.drive_backward()
-
-    time.sleep(5)
-
-    controller.brake()
-
-    print("BRAKE")
+        self.client.setCarControls(control)

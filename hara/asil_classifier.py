@@ -1,5 +1,5 @@
+#SARA 값을 넘겨받도록#
 from hara.iso26262_table import ASIL_TABLE
-
 
 class TTCCalculator:
 
@@ -179,49 +179,39 @@ class SafetyGoalGenerator:
                 "Standard monitoring."
         }
 
-
 class HARAEngine:
-
     def evaluate(
         self,
         scenario,
-        distance,
-        relative_speed
+        sara_result
     ):
-
-        ttc = TTCCalculator.calculate(
-            distance,
-            relative_speed
-        )
-
-        severity = (
-            SeverityAnalyzer()
-            .analyze(scenario)
-        )
-
-        exposure = (
-            DynamicExposureModel()
-            .calculate(scenario)
-        )
-
-        controllability = (
-            ControllabilityClassifier()
-            .classify(ttc)
-        )
-
-        asil = (
-            ASILClassifier()
-            .classify(
-                severity,
-                exposure,
-                controllability
+        # sara_result가 단일 dict인지 list인지 안전 처리
+        if isinstance(sara_result, list):
+            most_dangerous = max(
+                sara_result,
+                key=lambda x: x["risk_score"]
             )
-        )
+        else:
+            most_dangerous = sara_result
 
+        severity = SeverityAnalyzer().analyze(scenario)
+        exposure = DynamicExposureModel().calculate(scenario)
+
+        controllability = most_dangerous["controllability"]
+        risk_score = most_dangerous["risk_score"]
+        ttc = most_dangerous["ttc"]
+
+        asil = ASILClassifier().classify(
+            severity,
+            exposure,
+            controllability
+        )
         return {
             "ttc": ttc,
             "severity": severity,
             "exposure": exposure,
             "controllability": controllability,
+            "risk_score": risk_score,
+            "most_dangerous": most_dangerous,
             "asil": asil
         }

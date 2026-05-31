@@ -7,6 +7,9 @@ class AirSimRunner:
         self.client.confirmConnection()
         self.client.enableApiControl(True)
 
+        self.running = False
+
+
         print("[AirSim] Connected")
 
     # -------------------------

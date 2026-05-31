@@ -58,10 +58,7 @@ class RadarSensor:
 
                 "distance":
                     round(
-                        random.uniform(
-                            2,
-                            self.max_distance
-                        ),
+                        random.uniform(0,100),
                         2
                     ),
 

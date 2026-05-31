@@ -2,11 +2,11 @@ from SimulationRunner.airsim_runner import AirSimRunner
 from ai_hazard_generator.scenario_generator import ScenarioGenerator
 
 from TestSensor.radar_sensor import RadarSensor
-from TestSensor.camera_sensor import CameraSensor
-from TestSensor.lidar_sensor import LidarSensor
 from TestSensor.object_detector import ObjectDetector
 
 from sara.sara_engine import SaraEngine
+from sara.sara_engine import RiskQuantifier
+from sara.sara_engine import TTCCalculator
 from control.vehicle_controller import VehicleController
 
 from hara.asil_classifier import HARAEngine, SafetyGoalGenerator
@@ -25,7 +25,7 @@ def main():
     # ===================================
 
     runner = AirSimRunner()
-    client = runner.client   # ✅ 핵심: simulator 제거
+    client = runner.client
 
     print("\n===== AIRSIM CONNECTED =====")
 
@@ -34,6 +34,10 @@ def main():
     # ===================================
 
     scenario = ScenarioGenerator().generate()
+
+    # 🌧️ 강제 RAIN
+    scenario["weather"]["condition"] = "rain"
+    scenario["weather"]["visibility_distance"] = 40
 
     print("\n===== GENERATED SCENARIO =====")
     print(scenario)
@@ -44,26 +48,18 @@ def main():
 
     runner.apply_scenario(scenario)
 
-    runner.run()
+    print("\n===== SCENARIO APPLIED =====")
 
     # ===================================
-    # SENSOR
+    # SENSOR (RADAR ONLY)
     # ===================================
 
     radar_sensor = RadarSensor(client)
-    camera_sensor = CameraSensor(client)
-    lidar_sensor = LidarSensor(client)
     object_detector = ObjectDetector()
 
     radar_objects = radar_sensor.scan()
-    camera_frame = camera_sensor.capture()
-    lidar_points = lidar_sensor.get_point_cloud()
 
-    detected_objects = object_detector.detect(
-        radar_objects,
-        camera_frame,
-        lidar_points
-    )
+    detected_objects = object_detector.detect(radar_objects)
 
     print("\n===== DETECTED OBJECTS =====")
     print(detected_objects)
@@ -72,6 +68,8 @@ def main():
     # SARA
     # ===================================
 
+    print("\n===== SARA START =====")
+
     sara_engine = SaraEngine()
     controller = VehicleController(client)
 
@@ -79,19 +77,74 @@ def main():
 
     sara_results = []
 
-    for obj in detected_objects:
+    if not detected_objects:
+        print("[WARN] No detected objects")
+    else:
 
-        result = sara_engine.evaluate(obj, visibility)
-        sara_results.append(result)
+        for obj in detected_objects:
+            print(f"\n[OBJ] {obj}")
 
-        vehicle_state = runner.get_vehicle_state()
-        controller.react(result, vehicle_state)
+            # ==============================
+            # 1. OBJ → TTC 입력 변환
+            # ==============================
+
+            distance = obj.get("distance", 20.0)
+            rel_speed = obj.get("relative_speed", 5.0)
+
+            ttc = TTCCalculator.calculate(distance, rel_speed)
+
+            print(f"[TTC] {ttc}")
+
+            # ==============================
+            # 2. SARA 평가 (핵심 변경)
+            # ==============================
+
+            level = sara_engine.assess(ttc)
+
+            # ==============================
+            # 3. Risk 계산
+            # ==============================
+
+            risk = RiskQuantifier().quantify(ttc, visibility)
+
+            result = {
+                "object": obj,
+                "ttc": ttc,
+                "risk_score": risk,
+                "level": level
+            }
+
+            print(f"[SARA RESULT] {result}")
+
+            sara_results.append(result)
+
+            # ==============================
+            # 4. Control
+            # ==============================
+
+            vehicle_state = client.getCarState()
+            controller.react(result, vehicle_state)
+
+    print("\n===== SARA END =====")
 
     # ===================================
     # MOST DANGEROUS
     # ===================================
 
-    most_risky = max(sara_results, key=lambda x: x["risk_score"])
+    most_risky_raw = max(sara_results, key=lambda x: x["risk_score"])
+
+    # ===============================
+    # 🔥 ENGINE ADAPTER (핵심)
+    # ===============================
+
+    hara_input = {
+        "ttc": most_risky_raw["ttc"],
+        "risk_score": most_risky_raw["risk_score"],
+        "controllability": most_risky_raw["level"]  # SAFE → C1/C2/C3로 가정
+    }
+
+    print("\n===== HARA INPUT (ADAPTED) =====")
+    print(hara_input)
 
     # ===================================
     # HARA
@@ -101,28 +154,40 @@ def main():
 
     hara_result = hara_engine.evaluate(
         scenario,
-        most_risky
+        hara_input
     )
 
     print("\n===== HARA RESULT =====")
     print(hara_result)
 
+    print("\n===== HARA END =====")
+
     # ===================================
     # SAFETY GOAL
     # ===================================
 
+    print("\n===== SAFETY GOAL =====")
+
     safety_goal = SafetyGoalGenerator().generate(hara_result)
 
-    print("\n===== SAFETY GOAL =====")
     print(safety_goal)
 
     # ===================================
     # LOGGING
     # ===================================
 
-    RiskLogger().save(scenario, most_risky, hara_result)
+    print("\n===== LOGGING START =====")
+
+    RiskLogger().save(scenario, hara_result["most_dangerous"], hara_result)
+
     ScenarioRecorder().record(scenario)
-    MetricsDashboard().display(most_risky, hara_result)
+
+    MetricsDashboard().display(
+        hara_result["most_dangerous"],
+        hara_result
+    )
+
+    print("\n===== LOGGING END =====")
 
     # ===================================
     # SHUTDOWN
@@ -130,6 +195,8 @@ def main():
 
     input("\nPress Enter to shutdown...")
     runner.shutdown()
+
+    print("\n===== SHUTDOWN COMPLETE =====")
 
 
 if __name__ == "__main__":
