@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82d4719a-7152-425b-8c77-14fb26abbd18" name="변경" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/test_pedestrian.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/test_scenario.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/test_traffic.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ai_hazard_generator/test_weather.py" afterDir="false" />
+    <list default="true" id="82d4719a-7152-425b-8c77-14fb26abbd18" name="변경" comment="Test Push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_hazard_generator/AirSimRunner.py" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/airsim_runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/frontend/Dashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/frontend/api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/frontend/public" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/test_AirSimRunner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/frontend/src" beforeDir="false" afterPath="$PROJECT_DIR$/ai_hazard_generator/test_corner_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/airsim-dashboard/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/airsim-dashboard/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,6 +273,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
@@ -291,7 +284,7 @@
       <recent name="C:\Users\dbjin\PycharmProjects\PythonProject5\simulator" />
     </key>
   </component>
-  <component name="RunManager" selected="Python 테스트.test_scenario.TestRepeatability.test_each_call_returns_independent_result의 Python 테스트">
+  <component name="RunManager" selected="npm.start">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python">
       <module name="PythonProject5" />
       <option name="ENV_FILES" value="" />
@@ -315,6 +308,16 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/airsim-dashboard/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="test_scenario.TestRepeatability의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -385,38 +388,21 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="test_scenario.TestReturnValues.test_corner_case_is_dict의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="PythonProject5" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ai_hazard_generator" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_scenario.TestReturnValues.test_corner_case_is_dict&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="npm.start" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python 테스트.test_scenario.TestRepeatability.test_each_call_returns_independent_result의 Python 테스트" />
       <item itemvalue="Python 테스트.test_scenario.TestRepeatability.test_generate_called_multiple_times의 Python 테스트" />
       <item itemvalue="Python 테스트.test_scenario.TestRepeatability.test_sub_generators_called_n_times의 Python 테스트" />
       <item itemvalue="Python 테스트.test_scenario.TestRepeatability의 Python 테스트" />
-      <item itemvalue="Python 테스트.test_scenario.TestReturnValues.test_corner_case_is_dict의 Python 테스트" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="Python 테스트.test_scenario.TestRepeatability.test_each_call_returns_independent_result의 Python 테스트" />
         <item itemvalue="Python 테스트.test_scenario.TestRepeatability.test_sub_generators_called_n_times의 Python 테스트" />
         <item itemvalue="Python 테스트.test_scenario.TestRepeatability.test_generate_called_multiple_times의 Python 테스트" />
         <item itemvalue="Python 테스트.test_scenario.TestRepeatability의 Python 테스트" />
-        <item itemvalue="Python 테스트.test_scenario.TestReturnValues.test_corner_case_is_dict의 Python 테스트" />
       </list>
     </recent_temporary>
   </component>
@@ -531,7 +517,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779648379663</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Test Push">
+      <option name="closed" value="true" />
+      <created>1780235824008</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1780235824008</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Test Push">
+      <option name="closed" value="true" />
+      <created>1780235835056</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1780235835056</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +566,8 @@
     <MESSAGE value="start commit" />
     <MESSAGE value="Merge branch 'main' of https://github.com/dbwls38/piggyback" />
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="Test Push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test Push" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
