@@ -7,7 +7,6 @@ app.include_router(router)
 
 #######################
 from fastapi import WebSocket
-import asyncio
 
 # 연결된 클라이언트 저장
 clients = []

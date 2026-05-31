@@ -46,21 +46,3 @@ class NightRainScenario:
             "distance":
                 18
         }
-
-    def evaluate(
-        self,
-        sara_result,
-        hara_result
-    ):
-
-        print()
-
-        print(
-            f"Visibility Risk: "
-            f"{sara_result['risk_score']}"
-        )
-
-        print(
-            f"ASIL: "
-            f"{hara_result['asil']}"
-        )

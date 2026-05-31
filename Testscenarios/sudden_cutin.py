@@ -47,21 +47,3 @@ class SuddenCutInScenario:
             "distance":
                 10
         }
-
-    def evaluate(
-        self,
-        sara_result,
-        hara_result
-    ):
-
-        print()
-
-        print(
-            f"Collision Probability: "
-            f"{sara_result['collision_probability']}"
-        )
-
-        print(
-            f"ASIL: "
-            f"{hara_result['asil']}"
-        )

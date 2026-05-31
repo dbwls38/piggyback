@@ -38,7 +38,7 @@ from hara.safety_goal_generator import (
     SafetyGoalGenerator
 )
 
-from hara.scenario_risk_graph import (
+from hara.analyzer.scenario_risk_graph import (
     ScenarioRiskGraph
 )
 

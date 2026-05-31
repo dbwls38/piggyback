@@ -1,20 +1,16 @@
-from scenarios.right_turn_pedestrian import (
+from Testscenarios.right_turn_pedestrian import (
     RightTurnPedestrianScenario
 )
 
-from scenarios.jaywalking import (
-    JaywalkingScenario
-)
-
-from scenarios.sudden_cut_in import (
+from Testscenarios.sudden_cutin import (
     SuddenCutInScenario
 )
 
-from scenarios.night_rain import (
+from Testscenarios.night_rain import (
     NightRainScenario
 )
 
-from scenarios.sensor_failure import (
+from Testscenarios.sensor_failure import (
     SensorFailureScenario
 )
 
@@ -26,8 +22,6 @@ class ScenarioRunner:
         self.scenarios = [
 
             RightTurnPedestrianScenario(),
-
-            JaywalkingScenario(),
 
             SuddenCutInScenario(),
 
@@ -48,10 +42,10 @@ class ScenarioRunner:
 
             print(result)
 
-from scenarios.scenario_runner import (
+
+from Testscenarios.scenario_runner import (
     ScenarioRunner
 )
-
 
 runner = ScenarioRunner()
 

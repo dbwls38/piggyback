@@ -4,15 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="82d4719a-7152-425b-8c77-14fb26abbd18" name="변경" comment="Test Push">
-      <change afterPath="$PROJECT_DIR$/sara/sara_engine.py" afterDir="false" />
+    <list default="true" id="82d4719a-7152-425b-8c77-14fb26abbd18" name="변경" comment="Edit Push">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/assess/collision_predictor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/assess/controllability_estimator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/assess/risk_quantifier.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/assess/sara_engine.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/assess/ttc_calculator.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sara/test.sara.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/test_sara_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/airsim-dashboard/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hara/asil_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/hara/asil_classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hara/controllability_mapper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hara/dynamic_exposure_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hara/exposure_analyzer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hara/hara_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hara/iso26262_table.py" beforeDir="false" afterPath="$PROJECT_DIR$/hara/iso26262_table.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hara/safety_goal_generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hara/scenario_risk_graph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hara/severity_analyzer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hara/test_advanced_hara.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hara/test_hara.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/asil_reports" beforeDir="false" afterPath="$PROJECT_DIR$/hara/test_asil_classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/hara_logs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/scenario_logs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/sensor_logs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sara/sara_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/sara_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sara/test_sara_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/sara/test_sara_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/jaywalking.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testscenarios/sudden_cutin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/night_rain.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testscenarios/night_rain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/right_turn_pedestrian.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testscenarios/right_turn_pedestrian.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/scenario_runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testscenarios/scenario_runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/sensor_failure.py" beforeDir="false" afterPath="$PROJECT_DIR$/Testscenarios/sensor_failure.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenarios/sudden_cut_in.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/simulator/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/simulator/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_asil_classifier.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_controllability.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_dynamic_exposure.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_full_pipeline.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_hara_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_risk_quantifier.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_sara_engine.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_scenarios.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_simulator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_ttc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/backend/services/airsim_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/backend/services/airsim_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/backend/services/hara_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/backend/services/hara_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/backend/services/scenario_engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/backend/services/scenario_engine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/shared/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/shared/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +126,23 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python 테스트.hara.test_asil_classifier.test_asil_a의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_asil_b의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_asil_c의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_asil_d의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_controllability_c1의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_controllability_c2의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_controllability_c3의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_exposure_e2의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_exposure_e4의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_full_pipeline의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_qm의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_safety_goal_asil_d의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_severity_s1의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_severity_s2의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_severity_s3의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_ttc_calculation의 Python 테스트.executor": "Run",
+    "Python 테스트.hara.test_asil_classifier.test_ttc_infinite의 Python 테스트.executor": "Run",
     "Python 테스트.pyqt.py 내 Python 테스트.executor": "Run",
     "Python 테스트.sara.test_sara_engine.test_collision_predictor의 Python 테스트.executor": "Run",
     "Python 테스트.sara.test_sara_engine.test_controllability_c1의 Python 테스트.executor": "Run",
@@ -275,7 +326,9 @@
     "Python 테스트.test_weather.TestReturnValues.test_visibility_distance_is_int의 Python 테스트.executor": "Run",
     "Python 테스트.test_weather.TestReturnValues.test_visibility_distance_within_range의 Python 테스트.executor": "Run",
     "Python 테스트.test_weather.TestReturnValues의 Python 테스트.executor": "Run",
+    "Python 테스트.tests.test_asil_classifier.test_asil_classifier의 Python 테스트.executor": "Run",
     "Python 테스트.tests.test_full_pipeline.test_full_pipeline의 Python 테스트.executor": "Run",
+    "Python 테스트.tests.test_sara_engine.test_sara_engine의 Python 테스트.executor": "Run",
     "Python 테스트.tests.test_scenarios.test_scenarios의 Python 테스트.executor": "Run",
     "Python 테스트.tests.test_simulator.test_simulator의 Python 테스트.executor": "Run",
     "Python 테스트.tests.test_ttc.test_ttc_calculation의 Python 테스트.executor": "Run",
@@ -301,12 +354,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dbjin\PycharmProjects\PythonProject5\airsim-dashboard" />
+      <recent name="C:\Users\dbjin\PycharmProjects\PythonProject5\hara\analyzer" />
       <recent name="C:\Users\dbjin\PycharmProjects\PythonProject5\src" />
       <recent name="C:\Users\dbjin\PycharmProjects\PythonProject5" />
       <recent name="C:\Users\dbjin\PycharmProjects\PythonProject5\simulator" />
     </key>
   </component>
-  <component name="RunManager" selected="Python 테스트.sara.test_sara_engine.test_full_pipeline_safe의 Python 테스트">
+  <component name="RunManager" selected="Python 테스트.tests.test_scenarios.test_scenarios의 Python 테스트">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python">
       <module name="PythonProject5" />
       <option name="ENV_FILES" value="" />
@@ -330,40 +385,6 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sara.test_sara_engine.test_controllability_c1의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="PythonProject5" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;sara.test_sara_engine.test_controllability_c1&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sara.test_sara_engine.test_controllability_c2의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="PythonProject5" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="DEBUG_JUST_MY_CODE" value="false" />
-      <option name="RUN_TOOL" value="" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;sara.test_sara_engine.test_controllability_c2&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="sara.test_sara_engine.test_full_pipeline_critical의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -417,21 +438,55 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="tests.test_scenarios.test_scenarios의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject5" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_scenarios.test_scenarios&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests.test_simulator.test_simulator의 Python 테스트" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="PythonProject5" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="DEBUG_JUST_MY_CODE" value="false" />
+      <option name="RUN_TOOL" value="" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.test_simulator.test_simulator&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python 테스트.sara.test_sara_engine.test_controllability_c1의 Python 테스트" />
-      <item itemvalue="Python 테스트.sara.test_sara_engine.test_controllability_c2의 Python 테스트" />
       <item itemvalue="Python 테스트.sara.test_sara_engine.test_full_pipeline_critical의 Python 테스트" />
       <item itemvalue="Python 테스트.sara.test_sara_engine.test_full_pipeline_dangerous의 Python 테스트" />
       <item itemvalue="Python 테스트.sara.test_sara_engine.test_full_pipeline_safe의 Python 테스트" />
+      <item itemvalue="Python 테스트.tests.test_scenarios.test_scenarios의 Python 테스트" />
+      <item itemvalue="Python 테스트.tests.test_simulator.test_simulator의 Python 테스트" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python 테스트.tests.test_scenarios.test_scenarios의 Python 테스트" />
+        <item itemvalue="Python 테스트.tests.test_simulator.test_simulator의 Python 테스트" />
         <item itemvalue="Python 테스트.sara.test_sara_engine.test_full_pipeline_safe의 Python 테스트" />
         <item itemvalue="Python 테스트.sara.test_sara_engine.test_full_pipeline_dangerous의 Python 테스트" />
         <item itemvalue="Python 테스트.sara.test_sara_engine.test_full_pipeline_critical의 Python 테스트" />
-        <item itemvalue="Python 테스트.sara.test_sara_engine.test_controllability_c1의 Python 테스트" />
-        <item itemvalue="Python 테스트.sara.test_sara_engine.test_controllability_c2의 Python 테스트" />
       </list>
     </recent_temporary>
   </component>
@@ -570,7 +625,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780237384412</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Edit Push">
+      <option name="closed" value="true" />
+      <created>1780238709694</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1780238709695</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +667,8 @@
     <MESSAGE value="Merge branch 'main' of https://github.com/dbwls38/piggyback" />
     <MESSAGE value="Commit" />
     <MESSAGE value="Test Push" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Push" />
+    <MESSAGE value="Edit Push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Push" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -738,6 +802,21 @@
           <url>file://$PROJECT_DIR$/ai_hazard_generator/test_scenario.py</url>
           <line>182</line>
           <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/hara/test_asil_classifier.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sara/test_sara_engine.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sara/test_sara_engine.py</url>
+          <line>89</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
